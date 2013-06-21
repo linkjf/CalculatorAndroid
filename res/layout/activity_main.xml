@@ -1,0 +1,204 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*"
+    tools:context=".MainActivity" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+        
+
+        <EditText
+            android:id="@+id/operationText"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_span="5"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:inputType="none|number"/>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/oneButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+            android:background="@drawable/buttons"
+            android:text="@string/one"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/twoButton"
+          	android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/two"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/threeButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/three"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/addButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/add"
+            android:textColor="@android:color/black" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/fourButton"
+           android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/four"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/fiveButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/five"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/sixButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/six"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/subButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/buttons"
+            android:layout_weight="1"
+            android:text="@string/sub"
+            android:textColor="@android:color/black" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/sevenButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1" 
+        	android:background="@drawable/buttons"
+            android:text="@string/seven"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/eightButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1" 
+        	android:background="@drawable/buttons"
+            android:text="@string/eight"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/nineButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1" 
+        	android:background="@drawable/buttons"
+            android:text="@string/nine"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/multButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1"
+        	android:background="@drawable/buttons"
+            android:text="@string/mul"
+            android:textColor="@android:color/black" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/backImageButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1" 
+        	android:background="@drawable/buttons"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_example" />
+
+        <Button
+            android:id="@+id/zeroButton"
+            android:layout_width="fill_parent"
+        	android:layout_height="fill_parent"
+        	android:layout_weight="1" 
+        	android:background="@drawable/buttons"
+            android:text="@string/zero"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/reslButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons"
+            android:text="@string/res"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/equalTextSize" />
+
+        <Button
+            android:id="@+id/divButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/buttons"
+            android:text="@string/div"
+            android:textColor="@android:color/black" />
+
+    </TableRow>
+
+</TableLayout>
