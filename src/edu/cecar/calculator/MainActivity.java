@@ -1,8 +1,7 @@
 package edu.cecar.calculator;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.content.DialogInterface;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -29,8 +28,7 @@ public class MainActivity extends Activity implements OnClickListener {
 	private Button divButton;
 	private Button resButton;
 	private ImageButton backButton;
-	private String operationValue1 = "";
-	private String operationValue2 = "";
+	private String operations = "";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -92,103 +90,106 @@ public class MainActivity extends Activity implements OnClickListener {
 	public void onClick(View v) {
 
 		String tapedValue = "";
-		String operationValue = "+";
 		boolean operation = false;
-		boolean back = false;
+
+		if (operations.length() > 0) {
+			
+			String lastChart = operations.substring(operations.length() - 1);
+			
+			if (lastChart.equals("+") || lastChart.equals("-")
+					|| lastChart.equals("x") || lastChart.equals("÷"))
+				operation = true;
+		}
 
 		switch (v.getId()) {
 
 		case R.id.oneButton:
 			tapedValue = "1";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.twoButton:
 			tapedValue = "2";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.threeButton:
 			tapedValue = "3";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.fourButton:
 			tapedValue = "4";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.fiveButton:
 			tapedValue = "5";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.sixButton:
 			tapedValue = "6";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.sevenButton:
 			tapedValue = "7";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.eightButton:
 			tapedValue = "8";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.nineButton:
 			tapedValue = "9";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 		case R.id.zeroButton:
 			tapedValue = "0";
-			operationValue1 += tapedValue;
+			operations += tapedValue;
 
 			break;
 
 		case R.id.addButton:
-			operationValue = "+";
-			tapedValue = "+";
 
-			operationValue1 += tapedValue;
-
-			operation = true;
+			if (!operation && operations.length() > 0)
+				operations += "+";
 			break;
 
 		case R.id.subButton:
-			operationValue = "-";
-			operation = true;
+			if (!operation && operations.length() > 0)
+				operations += "-";
 			break;
 
 		case R.id.multButton:
-			operationValue = "x";
-			operation = true;
+			if (!operation && operations.length() > 0)
+				operations += "x";
 			break;
 
 		case R.id.divButton:
-			operationValue = "/";
-			operation = true;
+			if (!operation && operations.length() > 0)
+				operations += "÷";
 			break;
 
 		case R.id.reslButton:
-			operationValue = "=";
-			operation = true;
+
 			break;
 
 		case R.id.backImageButton:
-			if (operationValue1.length() > 0)
-				operationValue1 = operationValue1.substring(0,
-						operationValue1.length() - 1);
+			if (operations.length() > 0)
+				operations = operations.substring(0, operations.length() - 1);
 			else
 				operationText.setText("0");
 			break;
 		}
-
-		// cra1982@gmail.com
-
-		operationText.setText(operationValue1);
+		
+		if(operations.equals(""))
+			operations = "0";
+		
+		operationText.setText(operations);
 	}
 }
